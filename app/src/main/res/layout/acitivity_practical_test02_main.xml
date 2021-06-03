@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/init_button"
-        android:contentDescription="@string/pokemon_mage" />
+        android:contentDescription="@string/pokemon_image" />
 
     <TextView
         android:id="@+id/pokemon_abilites"

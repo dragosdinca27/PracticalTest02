@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         initButton = (Button)findViewById(R.id.init_button);
 
         pokemonImage = (ImageView)findViewById(R.id.pokemon_image);
+        
     }
+
+    
 
 //    @Override
 //    public void run() {
