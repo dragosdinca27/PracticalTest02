@@ -8,6 +8,8 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.provider.SyncStateContract;
+import android.util.Log;
 import android.view.View;
 
 import android.view.Menu;
@@ -17,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.net.Socket;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView pokemonName;
@@ -24,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView pokemonTypes;
     private Button initButton;
     private ImageView pokemonImage;
+
+//    private ServerThread serverThread = null;
+//    private ClientThread clientThread = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,29 @@ public class MainActivity extends AppCompatActivity {
 
         pokemonImage = (ImageView)findViewById(R.id.pokemon_image);
     }
+
+//    @Override
+//    public void run() {
+//        try {
+//            while (!Thread.currentThread().isInterrupted()) {
+//                Log.i(Constants.TAG, "[SERVER THREAD] Waiting for a client invocation...");
+//                Socket socket = serverSocket.accept();
+//                Log.i(SyncStateContract.Constants.TAG, "[SERVER THREAD] A connection request was received from " + socket.getInetAddress() + ":" + socket.getLocalPort());
+//                CommunicationThread communicationThread = new CommunicationThread(this, socket);
+//                communicationThread.start();
+//            }
+//        } catch (ClientProtocolException clientProtocolException) {
+//            Log.e(Constants.TAG, "[SERVER THREAD] An exception has occurred: " + clientProtocolException.getMessage());
+//            if (Constants.DEBUG) {
+//                clientProtocolException.printStackTrace();
+//            }
+//        } catch (IOException ioException) {
+//            Log.e(Constants.TAG, "[SERVER THREAD] An exception has occurred: " + ioException.getMessage());
+//            if (Constants.DEBUG) {
+//                ioException.printStackTrace();
+//            }
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
